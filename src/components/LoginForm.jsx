@@ -14,9 +14,12 @@ export default function LoginForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        {!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && email && (
-          <p style={{ color: 'red' }}>정확한 이메일 주소를 입력하세요.</p>
-        )}
+        {!/^[A-Za-z0-9]([-_.]?[A-Za-z0-9])*@[A-Za-z0-9]([-_.]?[A-Za-z0-9])*\.[A-Za-z]{2,3}$/.test(
+          email
+        ) &&
+          email && (
+            <p style={{ color: 'red' }}>정확한 이메일 주소를 입력하세요.</p>
+          )}
       </div>
       <div>
         <input
