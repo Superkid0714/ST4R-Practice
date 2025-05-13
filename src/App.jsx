@@ -1,5 +1,5 @@
 import LoginForm from './components/LoginForm';
-import './App.css'; // 이거 꼭 있어야 함!
+import './App.css';
 
 function App() {
   return (
